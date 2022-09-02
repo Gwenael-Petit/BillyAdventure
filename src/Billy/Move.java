@@ -11,7 +11,6 @@ public class Move {
 		Random random = new Random();
 		int value = random.nextInt(100);
 		if(value < 30) {
-			System.out.println("test");
 			liste.remove(0);
 			liste.add("_");
 		} else {
