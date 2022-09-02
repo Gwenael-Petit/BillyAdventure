@@ -5,10 +5,14 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Shop {
-	public ArrayList<String> rayon = new ArrayList<String>();
+	public static ArrayList<String> rayon = new ArrayList<String>();
 	public Random rand = new Random() ;
 	
 	public void getItem(Billy billy) {
+		
+		System.out.println("Bonjour mon jeune ami ! Bienvenu dans mon humble Shop, AKA demeure, boutique personelle et professionnelle ! ԅ(≖‿≖ԅ)");
+		
+		Shop.displayShop();
 		
 		Scanner sc = new Scanner (System.in);
 		
@@ -16,7 +20,7 @@ public class Shop {
 		choixItem = sc.nextInt();
 		
 		while(choixItem!=4) {
-			choixItem = sc.nextInt();
+			
 		
 			if (choixItem==1) {
 				if (billy.getBourse()>=35) {
@@ -30,21 +34,25 @@ public class Shop {
 				if (billy.getBourse()>=25) {
 					billy.getItems().addItemsInInventory(Powerup.ARC);
 					billy.setBourse(billy.getBourse()-25);
-					System.out.println("Merci bien jeune voyageur talentueux du nom de Billy! (Billy le bougre devrai-je direeeee...)");
+					System.out.println("Merci bien jeune voyageur talentueux du nom de Billy! (Billy le bougre devrai-je direeeee...) \n");
 				}else {
-					System.out.println("Hé brow t'as pas de thune là, te fou pas d'moi !! (Ծ‸ Ծ) ");
+					System.out.println("Hé brow t'as pas de thune là, te fou pas d'moi !! (Ծ‸ Ծ) \n");
 				}
 			} else if (choixItem==3) {
 				if (billy.getBourse()>=25) {
 					billy.getItems().addItemsInInventory(Powerup.PIOCHE);
 					billy.setBourse(billy.getBourse()-25);
-					System.out.println("Merci bien jeune voyageur talentueux du nom de Billy! (Billy le bougre devrai-je direeeee...)");
+					System.out.println("Merci bien jeune voyageur talentueux du nom de Billy! (Billy le bougre devrai-je direeeee...) \n");
 				}else {
-					System.out.println("T'es complètement marteau !! Cet engin vaut plus cher que ça, brow. (Ծ‸ Ծ)");
+					System.out.println("T'es complètement marteau !! Cet engin vaut plus cher que ça, brow. (Ծ‸ Ծ) \n");
 				}
 			}else if (choixItem == 4) {
-				System.out.println("Merci d'et' passé, BROW !! (☞ﾟヮﾟ)☞ ");
+				System.out.println("Merci d'et' passé, BROW !! (☞ﾟヮﾟ)☞  \n");
 			}
+			
+			Shop.displayShop();
+			choixItem = sc.nextInt();
+			
 		}
 	}
 	
@@ -55,8 +63,7 @@ public class Shop {
 		rayon.add("Pioche, 25 gems.");
 	}
 	
-	public void displayShop() {
-		System.out.println("Bonjour mon jeune ami ! Bienvenu dans mon humble Shop, AKA demeure, boutique personelle et professionnelle ! ԅ(≖‿≖ԅ)");
+	public static void displayShop() {
 		String res = "" ; 
 		for (int i = 0; i<rayon.size() ; i++) {
 			res = res + (i+1) + ". "  + rayon.get(i)+ ", \n";
@@ -74,7 +81,6 @@ public class Shop {
 		Billy billy = new Billy(3,inventaire,0,0);
 		
 		shop.setShop();
-		shop.displayShop();
 		shop.getItem(billy);
 		
 	}
