@@ -46,7 +46,7 @@ public class Main {
 				System.out.println(inventory.toStringInventory());
 			}
 			if(billy.isDead()) {
-				System.out.println("Buuuuuuuuuuuuuuuurg !!!!!!! \nVous êtes décéday (c triste ): ).");
+				System.out.println("Buuuuuuuuuuuuuuuurg !!!!!!! \nVous êtes décéday (c triste ¯\\_(ツ)_/¯ ).");
 			}
 			
 		}
