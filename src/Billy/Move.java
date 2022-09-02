@@ -6,6 +6,7 @@ public class Move {
 	int gemSpawnRate = 10;
 	int powerupSpawnRate = 10;
 	int shopkeeperSpawnRate = 10;
+	int fairySpawnRate = 3;
 	
 	MAP moveMap (MAP map) {
 		//mur du haut
@@ -57,6 +58,9 @@ public class Move {
 		//spawn boutique
 		 } else if (value > 100 - monsterSpawnRate - gemSpawnRate - powerupSpawnRate - shopkeeperSpawnRate) {
 			 map.map.get(1).add("S");
+		//spawn fée
+		 } else if(value > 100 - monsterSpawnRate - gemSpawnRate - powerupSpawnRate - shopkeeperSpawnRate - fairySpawnRate){
+			 map.map.get(1).add("F");
 	     //spawn caractère vide
 		 } else {
 			 map.map.get(1).add(" ");
@@ -96,7 +100,8 @@ public class Move {
 			
 			
 		} else if (map.map.get(1).get(1).charAt(0) == 'G') {
-			System.out.println("gem");
+			System.out.println("Vous avez ramassé une gemme !");
+			billy.setBourse(billy.getBourse()+1);
 		} else if (map.map.get(1).get(1).charAt(0) == 'P') {
 			Random random = new Random();
 			int value = random.nextInt(2);
@@ -109,7 +114,10 @@ public class Move {
 			}
 		}else if (map.map.get(1).get(1).charAt(0) == 'S') {
 			System.out.println("boutique");
-		} 
+		} else if(map.map.get(1).get(1).charAt(0) == 'F') {
+			System.out.println("Une fée ! Vous gagnez une vie supplémentaire !");
+			billy.setLife(billy.getLife()+1);
+		}
 	}
 	 
 	 MAP moveVertically (MAP map) {
