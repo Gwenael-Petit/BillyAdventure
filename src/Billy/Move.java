@@ -12,7 +12,7 @@ public class Move {
 		int value = random.nextInt(100);
 		if(value < 30) {
 			liste.remove(0);
-			liste.add("_");
+			liste.add("-");
 		} else {
 			liste.remove(0);
 			liste.add(".");
@@ -30,14 +30,27 @@ public class Move {
 			 liste.add(chaine);
 		 }
 		 
-		 
 		 //ajout d'un caractère aléatoire à la fin de la liste
 		 Random random = new Random();
 		 
-		 int value = random.nextInt(26) + 'a';
-		 liste.add("" + (char) value);
-		 
-		 
+		 int value = random.nextInt(100);
+		 //spawn monstre
+		 if(value > 100 - monsterSpawnRate) {
+			 liste.add("M");
+		//spawn gem
+		 } else if (value > 100 - monsterSpawnRate - gemSpawnRate) {
+			 liste.add("G");
+		//spawn power up
+		 } else if (value > 100 - monsterSpawnRate - gemSpawnRate - powerupSpawnRate) {
+			 liste.add("P");
+		//spawn boutique
+		 } else if (value > 100 - monsterSpawnRate - gemSpawnRate - powerupSpawnRate - shopkeeperSpawnRate) {
+			 liste.add("S");
+	     //spawn caractère vide
+		 } else {
+			 liste.add(" ");
+		 }
+		
 		 return liste;
 	 }
 	 
@@ -46,6 +59,7 @@ public class Move {
 		 String chaine = liste.remove(0);
 		 
 		 //initialise une nouvelle map (à faire) et ajoute
+		 
 		 liste.set(0, chaine);
 		 return liste;
 	 }
@@ -57,9 +71,9 @@ public class Move {
 		Move move = new Move();
 		ArrayList<String> liste = new ArrayList<String>();
 		liste.add("b");
-		liste.add("b");
-		liste.add("c");
-		liste.add("d");
+		liste.add(" ");
+		liste.add(" ");
+		liste.add(" ");
 		System.out.println(liste);
 		int i = 0;
 		while(i < 10) {
