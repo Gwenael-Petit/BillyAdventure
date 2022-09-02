@@ -69,7 +69,7 @@ public class Move {
 		if(map.map.get(1).get(1).charAt(0) == 'M') {
 			if(billy.getLife() != 1) {
 				billy.looseOneLife();
-				System.out.println("Vous avez perdu une vie");
+				System.out.println("Vous avez perdu une vie. Il vous reste "+billy.getLife()+" vies. Courage!!");
 			} else {
 				billy.looseOneLife();
 			}
