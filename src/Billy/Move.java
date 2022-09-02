@@ -7,27 +7,38 @@ public class Move {
 	int powerupSpawnRate = 10;
 	int shopkeeperSpawnRate = 10;
 	
-	ArrayList<String> moveMap (ArrayList<String> liste) {
+	MAP moveMap (MAP map) {
+		//mur du haut
 		Random random = new Random();
 		int value = random.nextInt(100);
 		if(value < 30) {
-			liste.remove(0);
-			liste.add("-");
+			map.map.get(0).remove(0);
+			map.map.get(0).add("-");
 		} else {
-			liste.remove(0);
-			liste.add(".");
+			map.map.get(0).remove(0);
+			map.map.get(0).add(".");
 		}
 		
-		return liste;
+		//mur du bas
+		
+		value = random.nextInt(100);
+		if(value < 30) {
+			map.map.get(2).remove(0);
+			map.map.get(2).add("-");
+		} else {
+			map.map.get(2).remove(0);
+			map.map.get(2).add(".");
+		}
+		return map;
 	}
-	 ArrayList<String> moveRight (ArrayList<String> liste) {
+	MAP moveRight (MAP map) {
 		 //récupère la première valeur 
-		 String chaine = liste.remove(0);
+		 String chaine = map.map.get(1).remove(0);
 		 //change le nouveau caractère par la valeur sauvegarder
-		 if(!liste.isEmpty()) {
-			 liste.set(0, chaine);
+		 if(!map.map.get(1).isEmpty()) {
+			 map.map.get(1).set(0, chaine);
 		 } else {
-			 liste.add(chaine);
+			 map.map.get(1).add(chaine);
 		 }
 		 
 		 //ajout d'un caractère aléatoire à la fin de la liste
@@ -36,48 +47,37 @@ public class Move {
 		 int value = random.nextInt(100);
 		 //spawn monstre
 		 if(value > 100 - monsterSpawnRate) {
-			 liste.add("M");
+			 map.map.get(1).add("M");
 		//spawn gem
 		 } else if (value > 100 - monsterSpawnRate - gemSpawnRate) {
-			 liste.add("G");
+			 map.map.get(1).add("G");
 		//spawn power up
 		 } else if (value > 100 - monsterSpawnRate - gemSpawnRate - powerupSpawnRate) {
-			 liste.add("P");
+			 map.map.get(1).add("P");
 		//spawn boutique
 		 } else if (value > 100 - monsterSpawnRate - gemSpawnRate - powerupSpawnRate - shopkeeperSpawnRate) {
-			 liste.add("S");
+			 map.map.get(1).add("S");
 	     //spawn caractère vide
 		 } else {
-			 liste.add(" ");
+			 map.map.get(1).add(" ");
 		 }
 		
-		 return liste;
+		 return map;
 	 }
 	 
-	 	ArrayList<ArrayList<String>> moveVertically () {
+	 MAP moveVertically (MAP map) {
 		 
-		 MAP map = new MAP();
+		 //MAP map = new MAP();
 		 
-		 ArrayList<ArrayList<String>> new_way = new ArrayList<ArrayList<String>>();
-		 
-		 new_way = map.Generation_Map();
-		 
-		 ArrayList<String> Billy = new ArrayList<String>();
-		 
-		 Billy = new_way.get(1);
+		 map.Generation_Map();
 		 
 		 for (int i =0; i<29; i+=1) {
-			 
 			 Move move = new Move();
-			 
-			 Billy = move.moveRight(Billy); 
+			 move.moveRight(map); 
 			 
 			 		 
-			}
-		 
-		 new_way.set(1, Billy);
-		 
-		 return new_way;
+		}
+		 return map;
 	 	}
 	 
 	 
@@ -85,18 +85,20 @@ public class Move {
 	
 	public static void main(String[] args) {
 		Move move = new Move();
-		ArrayList<String> liste = new ArrayList<String>();
-		liste.add("b");
-		liste.add(" ");
-		liste.add(" ");
-		liste.add(" ");
-		System.out.println(liste);
+		MAP map = new MAP();
+		map.Generation_Map();
 		int i = 0;
 		while(i < 10) {
-			move.moveRight(liste);
-			System.out.println(liste);
+			move.moveRight(map);
+			System.out.println(map.map.get(0));
+			System.out.println(map.map.get(1));
+			System.out.println(map.map.get(2));
 			i ++;
 		}
+		move.moveVertically(map);
+		System.out.println(map.map.get(0));
+		System.out.println(map.map.get(1));
+		System.out.println(map.map.get(2));
 		
 		
 	}
