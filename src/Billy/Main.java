@@ -24,7 +24,7 @@ public class Main {
 			
 			System.out.println(saisieUtilisateur);
 			
-			if (saisieUtilisateur == "" ){
+			if (saisieUtilisateur.equals("") ){
 				bouger.moveRight(map);
 				bouger.moveMap(map);
 			}else if (saisieUtilisateur.charAt(0)=='d' || saisieUtilisateur.charAt(0)==' ') {

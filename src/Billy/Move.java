@@ -71,12 +71,18 @@ public class Move {
 		 
 		 map.Generation_Map();
 		 
+		 
 		 for (int i =0; i<29; i+=1) {
 			 Move move = new Move();
 			 move.moveRight(map); 
 			 
 			 		 
 		}
+		map.map.get(1).set(1, " ");
+		map.map.get(1).set(2, " ");
+		map.map.get(1).set(3, "P");
+		map.map.get(1).set(4, " ");
+		map.map.get(1).set(5, " ");
 		 return map;
 	 	}
 	 
