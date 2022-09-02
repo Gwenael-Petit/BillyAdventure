@@ -10,12 +10,8 @@ public class Main {
 		
 		MAP map = new MAP();
 		Inventory inventaire = new Inventory();
-		Billy billy = new Billy(3,inventaire,0,0) ;
-		
+		Billy billy = new Billy(3,inventaire,0,0);
 		while (!billy.isDead()) {
-			
-		
-			
 			
 			Display d = new Display(map);
 			System.out.println(d);
@@ -24,7 +20,7 @@ public class Main {
 			Move bouger = new Move () ;
 			
 			if (saisieUtilisateur.equals("") ){
-
+				
 				clear();
 				bouger.detect(map, billy);
 				bouger.moveRight(map);

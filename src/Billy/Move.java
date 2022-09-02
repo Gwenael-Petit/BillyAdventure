@@ -67,13 +67,32 @@ public class Move {
 	
 	void detect (MAP map, Billy billy) {
 		if(map.map.get(1).get(1).charAt(0) == 'M') {
-			if(billy.getLife() != 1) {
-				billy.looseOneLife();
-				System.out.println("Vous avez perdu une vie. Il vous reste "+billy.getLife()+" vie(s). Courage Billy!!");
+			if(!billy.getItems().getInventory().isEmpty()) {
+				int i = 0;
+				boolean foundItem = false;
+				while(i < billy.getItems().getInventory().size() && foundItem != true) {
+					if(billy.getItems().getInventory().get(i).equals(Powerup.ARC)) {
+						System.out.println("Vous avez tué le monstre avec un arc, par manque de flèches vous lui avez lancé dessus.");
+						billy.getItems().removeItemsInInventory(Powerup.ARC);
+						foundItem = true;
+					} else {
+						if(billy.getLife() != 1) {
+							billy.looseOneLife();
+							System.out.println("Vous avez perdu une vie. Il vous reste "+billy.getLife()+" vie(s). Courage Billy!!");
+						} else {
+							billy.looseOneLife();
+						}
+					}
+					i ++;
+				}
 			} else {
-				billy.looseOneLife();
+				if(billy.getLife() != 1) {
+					billy.looseOneLife();
+					System.out.println("Vous avez perdu une vie. Il vous reste "+billy.getLife()+" vie(s). Courage Billy!!");
+				} else {
+					billy.looseOneLife();
+				}
 			}
-			
 			
 			
 		} else if (map.map.get(1).get(1).charAt(0) == 'G') {
