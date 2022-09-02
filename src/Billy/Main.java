@@ -28,6 +28,7 @@ public class Main {
 			if (saisieUtilisateur.equals("") ){
 				
 				clear();
+				bouger.difficulty(billy.getScore());
 				bouger.detect(map, billy);
 				bouger.moveRight(map);
 				bouger.moveMap(map);
