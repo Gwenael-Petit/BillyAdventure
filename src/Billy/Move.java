@@ -5,7 +5,7 @@ public class Move {
 	int monsterSpawnRate = 10;
 	int gemSpawnRate = 15;
 	int powerupSpawnRate = 10;
-	int shopkeeperSpawnRate = 5;
+	int shopkeeperSpawnRate = 8;
 	int fairySpawnRate = 0;
 	
 	Scanner sc = new Scanner (System.in);
