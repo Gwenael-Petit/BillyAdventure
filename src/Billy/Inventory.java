@@ -2,7 +2,7 @@ package Billy;
 
 import java.util.ArrayList;
 
-public class billyInventory {
+public class Inventory {
 	public ArrayList <Powerup> inventory = new ArrayList<Powerup>();
 	public boolean inventoryFull;
 	
@@ -14,7 +14,7 @@ public class billyInventory {
 		}
 	}
 	
-	public billyInventory() {
+	public Inventory() {
 		this.inventory = new ArrayList<Powerup>();
 		this.inventoryFull = false;
 	}
