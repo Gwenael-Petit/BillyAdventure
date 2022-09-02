@@ -34,8 +34,38 @@ public class Main {
 				bouger.moveMap(map);
 			} else if (saisieUtilisateur.charAt(0) == 's' || saisieUtilisateur.charAt(0) == 'z') {
 				clear();
-				bouger.moveVertically(map);
+				
+				if(!billy.getItems().getInventory().isEmpty()) {
+					boolean value = false;
+					int i =0;
+					while(!value && i<billy.getItems().getInventory().size()) {
+						if(billy.getItems().getInventory().get(i).equals(Powerup.PIOCHE)) {
+							clear();
+							i+=1;
+							billy.getItems().removeItemsInInventory(Powerup.PIOCHE);
+							bouger.moveVertically(map);
+							value = true;
+							
+						}
+						else {
+							i+=1;
+						}
+					}
+					
+					if (!value) {
+						System.out.println("Barbare que vous êtes, vous n'avez que des armes, vous pouvez toujours essayer de tirer à l'arc sur le mur...");
+					}
+				
+				}
+				
+				else {
+					System.out.println("Vous n'avez pas d'outils dans votre inventaire, bon courage pour casser le mur à la main.");
+					bouger.detect(map, billy);
+					bouger.moveMap(map);
+					bouger.moveRight(map);
+				}
 			}
+				
 			else if (saisieUtilisateur.charAt(0) == 'i') {
 			
 				System.out.println(billy.getItems().toStringInventory());
