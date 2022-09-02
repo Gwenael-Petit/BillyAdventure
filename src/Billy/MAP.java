@@ -19,7 +19,7 @@ public ArrayList <String> Generation_Mur(){
 		value = random.nextInt(100);
 		
 		if (value>30) {
-			mur.add("_");
+			mur.add("-");
 		}
 		
 		else {
@@ -46,17 +46,34 @@ public ArrayList <ArrayList <String>> Generation_Map(){
 	return this.map;
 }
 
-public static void main(String[] args){
+
+
+/*public static void main(String[] args){
 	
 	MAP map = new MAP();
 	
 	map.Generation_Map();
 	
-	System.out.println(map.map.get(0));
-	System.out.println(map.map.get(1));
-	System.out.println(map.map.get(2));
+	String l0 = "";
+	for(int i = 0; i < map.map.get(0).size(); i++) {
+		l0 += map.map.get(0).get(i);
+	}
 	
-}
+	String l1 = "";
+	for(int i = 0; i < map.map.get(1).size(); i++) {
+		l1 += map.map.get(1).get(i);
+	}
+	
+	String l2 = "";
+	for(int i = 0; i < map.map.get(2).size(); i++) {
+		l2 += map.map.get(2).get(i);
+	}
+	
+	System.out.println(l0);
+	System.out.println(l1);
+	System.out.println(l2);
+	
+}*/
 
 }
 
