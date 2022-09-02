@@ -66,8 +66,9 @@ public class Main {
 			}
 				
 			else if (saisieUtilisateur.charAt(0) == 'i') {
-			
+				clear();
 				System.out.println(billy.getItems().toStringInventory());
+				System.out.println("vous avez " + billy.getBourse()+ " gemmes.");
 			}
 			int s = billy.getScore();
 			if(billy.isDead()) {
