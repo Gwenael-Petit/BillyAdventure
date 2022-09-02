@@ -6,7 +6,7 @@ public class Move {
 	int gemSpawnRate = 10;
 	int powerupSpawnRate = 10;
 	int shopkeeperSpawnRate = 10;
-	int fairySpawnRate = 3;
+	int fairySpawnRate = 0;
 	
 	MAP moveMap (MAP map) {
 		//mur du haut

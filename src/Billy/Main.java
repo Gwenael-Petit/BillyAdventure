@@ -73,8 +73,8 @@ public class Main {
 			int s = billy.getScore();
 			if(billy.isDead()) {
 				System.out.println("Buuuuuuuuuuuuuuuurg !!!!!!! \nVous êtes décéday (c triste ¯\\_(ツ)_/¯ ).");
-				System.out.println("Score: "+s);
 			}
+			System.out.println("Score: "+s);
 			billy.setScore(s + 1);
 			
 		}
