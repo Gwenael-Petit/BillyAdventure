@@ -98,7 +98,15 @@ public class Move {
 		} else if (map.map.get(1).get(1).charAt(0) == 'G') {
 			System.out.println("gem");
 		} else if (map.map.get(1).get(1).charAt(0) == 'P') {
-			System.out.println("power up");
+			Random random = new Random();
+			int value = random.nextInt(2);
+			if (value == 0) {
+				billy.getItems().addItemsInInventory(Powerup.ARC);
+				System.out.println("Vous avez gagné un arc !");
+			} else if (value == 1) {
+				billy.getItems().addItemsInInventory(Powerup.PIOCHE);
+				System.out.println("Vous avez gagné une pioche");
+			}
 		}else if (map.map.get(1).get(1).charAt(0) == 'S') {
 			System.out.println("boutique");
 		} 
@@ -129,23 +137,10 @@ public class Move {
 	 
 	
 	public static void main(String[] args) {
-		Move move = new Move();
-		MAP map = new MAP();
-		map.Generation_Map();
-		int i = 0;
-		while(i < 10) {
-			move.moveRight(map);
-			move.moveMap(map);
-			System.out.println(map.map.get(0));
-			System.out.println(map.map.get(1));
-			System.out.println(map.map.get(2));
-			i ++;
-		}
-		move.moveVertically(map);
-		System.out.println(map.map.get(0));
-		System.out.println(map.map.get(1));
-		System.out.println(map.map.get(2));
 		
+		Random random = new Random();
+		int value = random.nextInt(2);
+		System.out.println(value);
 		
 	}
 }

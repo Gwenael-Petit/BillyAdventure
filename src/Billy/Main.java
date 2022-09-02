@@ -37,10 +37,8 @@ public class Main {
 				bouger.moveVertically(map);
 			}
 			else if (saisieUtilisateur.charAt(0) == 'i') {
-				
-				Inventory inventory = new Inventory();
-				
-				System.out.println(inventory.toStringInventory());
+			
+				System.out.println(billy.getItems().toStringInventory());
 			}
 			if(billy.isDead()) {
 				System.out.println("Buuuuuuuuuuuuuuuurg !!!!!!! \nVous êtes décéday (c triste ¯\\_(ツ)_/¯ ).");
