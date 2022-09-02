@@ -8,6 +8,8 @@ public class Main {
 	
 	public static void main (String [] args ) {
 		
+		ecranTitre();
+		
 		MAP map = new MAP();
 		Inventory inventaire = new Inventory();
 		Billy billy = new Billy(3,inventaire,0,0);
@@ -21,6 +23,8 @@ public class Main {
 		while (!billy.isDead() && !outgame) {
 			Display d = new Display(map);
 			System.out.println(d);
+			
+			System.out.println("[i]: inventaire. \n[d] [Espace] [Entrée]: avancer.\n[z] [s]: monter / descendre (nécessite et utilise une pioche). \n[q]: quitter\n");
 			
 			String saisieUtilisateur = sc.nextLine();
 			Move bouger = new Move () ;
@@ -113,6 +117,21 @@ public class Main {
 	public static void clear () {
 		for (int i = 0; i<25; i++) {
 			System.out.println("\n");
+		}
+	}
+	
+	public static void ecranTitre() {
+		boolean continuer = false;
+		while(!continuer) {
+			System.out.println("HEYYY BILLYYY\n");
+			System.out.println("Tu viens de tomber dans un trou qui t'as amené dans un donjon, too bad ¯\\_(ツ)_/¯. \nBon courage pour survivre!");
+			
+			
+			System.out.println("\nAppuyer sur une touche pour continuer.");
+			Scanner sc = new Scanner (System.in);
+			String suite = sc.nextLine();
+			continuer = true;
+			clear();
 		}
 	}
 }
