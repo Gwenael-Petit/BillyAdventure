@@ -46,5 +46,17 @@ public class Inventory {
 		return "Dans l'inventaire il y a "+ nbrArc +" Arcs, "+ nbrPioche + " Pioches.";
 	}
 	
+	public void addItemsInInventory(Powerup pw) {
+		if(!this.inventoryFull) {
+			this.inventory.add(pw);			
+		}
+	}
+	
+	public void removeItemsInInventory(Powerup pw) {
+		if(this.inventory.size()!=0) {
+			this.inventory.remove(pw);			
+		}
+	}
+	
 }
 
