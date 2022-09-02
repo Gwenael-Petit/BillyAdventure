@@ -72,6 +72,13 @@ public class Billy {
 		return this.life ;
 	}
 	
+	public boolean isDead() {
+		if(this.life==0) {
+			return true;
+		}
+		return false;
+	}
+	
 	public int winScore (){
 		this.score = this.score + 1 ;
 		return this.score ;

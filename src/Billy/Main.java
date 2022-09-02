@@ -12,7 +12,7 @@ public class Main {
 		Inventory inventaire = new Inventory();
 		Billy billy = new Billy(3,inventaire,0,0) ;
 		
-		while (true) {
+		while (!billy.isDead()) {
 			
 			clear();
 			
@@ -29,9 +29,11 @@ public class Main {
 				bouger.moveRight(map);
 				bouger.moveMap(map);
 			} else if (saisieUtilisateur.charAt(0) == 's' || saisieUtilisateur.charAt(0) == 'z') {
-				bouger.moveVertically(map) ;
+				bouger.moveVertically(map);
 			}
-			
+			if(billy.isDead()) {
+				System.out.println("Vous avez perdu.");
+			}
 		}
 			
 	}

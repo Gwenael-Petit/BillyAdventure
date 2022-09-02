@@ -18,6 +18,7 @@ public class Inventory {
 		return inventory;
 	}
 
+	//Inventaire plein ou non.
 	public boolean isFull() {
 		if(!this.inventory.isEmpty()) {
 			return this.inventoryFull = true;
@@ -31,6 +32,7 @@ public class Inventory {
 		this.inventoryFull = false;
 	}
 	
+	//Affichage du contenu de l'inventaire
 	public String toStringInventory() {
 		int nbrArc=0;
 		int nbrPioche=0;
