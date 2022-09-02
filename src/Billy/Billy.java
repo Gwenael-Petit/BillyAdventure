@@ -1,24 +1,59 @@
 package Billy;
-import java.util.ArrayList;
+
 import java.util.Random;
 
 public class Billy {
-	static final char name = 'B' ;
-	static int life = 3 ;
-	static Inventory items ; 
-	static int score = 0 ;
-	static int bourse = 0 ;
+	private final char name = 'B' ;
+	private int life = 3 ;
+	private Inventory items ; 
+	private int score = 0 ;
+	private int bourse = 0 ;
 	
 	public static void main (String [] args ) {
 		
 	}
 	
-	public Billy (char name, int life, Inventory items, int score, int bourse) {
-		this.name= name; 
+	public Billy (int life, Inventory items, int score, int bourse) {
 		this.life= life;
 		this.items=items;
 		this.score = score ;
 		this.bourse = bourse ;
+	}
+
+	public int getLife() {
+		return life;
+	}
+
+	public void setLife(int life) {
+		this.life = life;
+	}
+
+	public Inventory getItems() {
+		return items;
+	}
+
+	public void setItems(Inventory items) {
+		this.items = items;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+
+	public int getBourse() {
+		return bourse;
+	}
+
+	public void setBourse(int bourse) {
+		this.bourse = bourse;
+	}
+
+	public char getName() {
+		return name;
 	}
 
 	public String toString() {

@@ -3,8 +3,8 @@ package Billy;
 import java.util.ArrayList;
 
 public class Inventory {
-	public ArrayList <Powerup> inventory = new ArrayList<Powerup>();
-	public boolean inventoryFull;
+	private ArrayList <Powerup> inventory = new ArrayList<Powerup>();
+	private boolean inventoryFull;
 	
 	public boolean isFull() {
 		if(!this.inventory.isEmpty()) {
