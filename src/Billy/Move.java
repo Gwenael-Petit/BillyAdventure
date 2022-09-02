@@ -90,6 +90,7 @@ public class Move {
 		int i = 0;
 		while(i < 10) {
 			move.moveRight(map);
+			move.moveMap(map);
 			System.out.println(map.map.get(0));
 			System.out.println(map.map.get(1));
 			System.out.println(map.map.get(2));
