@@ -54,15 +54,31 @@ public class Move {
 		 return liste;
 	 }
 	 
-	 ArrayList<String> moveVertically (ArrayList<String> liste) {
-		 //prend le premier caractère de la chaine
-		 String chaine = liste.remove(0);
+	 	ArrayList<ArrayList<String>> moveVertically () {
 		 
-		 //initialise une nouvelle map (à faire) et ajoute
+		 MAP map = new MAP();
 		 
-		 liste.set(0, chaine);
-		 return liste;
-	 }
+		 ArrayList<ArrayList<String>> new_way = new ArrayList<ArrayList<String>>();
+		 
+		 new_way = map.Generation_Map();
+		 
+		 ArrayList<String> Billy = new ArrayList<String>();
+		 
+		 Billy = new_way.get(1);
+		 
+		 for (int i =0; i<29; i+=1) {
+			 
+			 Move move = new Move();
+			 
+			 Billy = move.moveRight(Billy); 
+			 
+			 		 
+			}
+		 
+		 new_way.set(1, Billy);
+		 
+		 return new_way;
+	 	}
 	 
 	 
 	 
