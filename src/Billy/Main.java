@@ -46,12 +46,15 @@ public class Main {
 			System.out.println("   { )_");
 			System.out.println("    /  >>   _");
 			System.out.println("   / /\\°\\__/.°   Vous avez fait demi-tour!!");
-			System.out.println("  °   //°--°    Et avez pris la fuite tel un lache!!");
-			System.out.println("      \\\\       Votre score final est :");
+			System.out.println("  °   //°--°    Et avez pris la fouite tel un lache!!");
+			System.out.println("      \\\\       Votre score final est : "+billy.getScore()+".");
 			System.out.println("      (/\n");
 
 			outgame=true;
-							
+						
+			
+			break;
+			
 			}
 			
 			
