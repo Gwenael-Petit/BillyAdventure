@@ -72,6 +72,11 @@ public ArrayList <ArrayList <String>> Generation_Map(){
 	System.out.println(l0);
 	System.out.println(l1);
 	System.out.println(l2);
+	 
+	for(int clear = 0; clear < 1000; clear++)
+	  {
+	     System.out.println("\n") ;
+	  }
 	
 }*/
 

@@ -70,9 +70,12 @@ public class Main {
 			
 				System.out.println(billy.getItems().toStringInventory());
 			}
+			int s = billy.getScore();
 			if(billy.isDead()) {
 				System.out.println("Buuuuuuuuuuuuuuuurg !!!!!!! \nVous êtes décéday (c triste ¯\\_(ツ)_/¯ ).");
+				System.out.println("Score: "+s);
 			}
+			billy.setScore(s + 1);
 			
 		}
 			
