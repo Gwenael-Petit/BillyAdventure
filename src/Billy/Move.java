@@ -64,6 +64,26 @@ public class Move {
 		
 		 return map;
 	 }
+	
+	void detect (MAP map, Billy billy) {
+		if(map.map.get(1).get(1).charAt(0) == 'M') {
+			if(billy.getLife() != 1) {
+				billy.looseOneLife();
+				System.out.println("Vous avez perdu une vie");
+			} else {
+				billy.looseOneLife();
+			}
+			
+			
+			
+		} else if (map.map.get(1).get(1).charAt(0) == 'G') {
+			System.out.println("gem");
+		} else if (map.map.get(1).get(1).charAt(0) == 'P') {
+			System.out.println("power up");
+		}else if (map.map.get(1).get(1).charAt(0) == 'S') {
+			System.out.println("boutique");
+		} 
+	}
 	 
 	 MAP moveVertically (MAP map) {
 		 

@@ -14,7 +14,8 @@ public class Main {
 		
 		while (!billy.isDead()) {
 			
-			clear();
+		
+			
 			
 			Display d = new Display(map);
 			System.out.println(d);
@@ -23,17 +24,25 @@ public class Main {
 			Move bouger = new Move () ;
 			
 			if (saisieUtilisateur.equals("") ){
+
+				clear();
+				bouger.detect(map, billy);
 				bouger.moveRight(map);
 				bouger.moveMap(map);
+				
 			}else if (saisieUtilisateur.charAt(0)=='d' || saisieUtilisateur.charAt(0)==' ') {
+				clear();
+				bouger.detect(map, billy);
 				bouger.moveRight(map);
 				bouger.moveMap(map);
 			} else if (saisieUtilisateur.charAt(0) == 's' || saisieUtilisateur.charAt(0) == 'z') {
+				clear();
 				bouger.moveVertically(map);
 			}
 			if(billy.isDead()) {
 				System.out.println("Vous avez perdu.");
 			}
+			
 		}
 			
 	}
