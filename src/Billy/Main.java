@@ -76,6 +76,7 @@ public class Main {
 			}
 			System.out.println("Score: "+s);
 			billy.setScore(s + 1);
+			bouger.difficulty(billy.getScore());
 			
 		}
 			

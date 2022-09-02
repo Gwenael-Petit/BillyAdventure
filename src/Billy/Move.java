@@ -3,10 +3,11 @@ import java.util.*;
 
 public class Move {
 	int monsterSpawnRate = 10;
-	int gemSpawnRate = 10;
+	int gemSpawnRate = 15;
 	int powerupSpawnRate = 10;
-	int shopkeeperSpawnRate = 10;
+	int shopkeeperSpawnRate = 5;
 	int fairySpawnRate = 0;
+	
 	
 	MAP moveMap (MAP map) {
 		//mur du haut
@@ -144,7 +145,9 @@ public class Move {
 	 	}
 	 
 	 
-	 
+	 public void difficulty (int score) {
+		 this.monsterSpawnRate = score/50 * this.monsterSpawnRate;
+	 }
 	
 	public static void main(String[] args) {
 		
