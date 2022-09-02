@@ -13,7 +13,6 @@ public class Main {
 		Billy billy = new Billy(3,inventaire,0,0);
 		billy.getItems().addItemsInInventory(Powerup.ARC);
 		while (!billy.isDead()) {
-			
 			Display d = new Display(map);
 			System.out.println(d);
 			
