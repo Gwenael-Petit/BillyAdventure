@@ -22,8 +22,6 @@ public class Main {
 			String saisieUtilisateur = sc.nextLine();
 			Move bouger = new Move () ;
 			
-			System.out.println(saisieUtilisateur);
-			
 			if (saisieUtilisateur.equals("") ){
 				bouger.moveRight(map);
 				bouger.moveMap(map);
