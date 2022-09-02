@@ -39,6 +39,12 @@ public class Main {
 				clear();
 				bouger.moveVertically(map);
 			}
+			else if (saisieUtilisateur.charAt(0) == 'i') {
+				
+				Inventory inventory = new Inventory();
+				
+				System.out.println(inventory.toStringInventory());
+			}
 			if(billy.isDead()) {
 				System.out.println("Vous avez perdu.");
 			}
