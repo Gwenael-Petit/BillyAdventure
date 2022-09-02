@@ -11,8 +11,14 @@ public class Main {
 		MAP map = new MAP();
 		Inventory inventaire = new Inventory();
 		Billy billy = new Billy(3,inventaire,0,0);
+		
+		boolean outgame=false;
+		
 		billy.getItems().addItemsInInventory(Powerup.ARC);
-		while (!billy.isDead()) {
+		
+		
+		
+		while (!billy.isDead() && !outgame) {
 			Display d = new Display(map);
 			System.out.println(d);
 			
@@ -31,7 +37,25 @@ public class Main {
 				bouger.detect(map, billy);
 				bouger.moveRight(map);
 				bouger.moveMap(map);
-			} else if (saisieUtilisateur.charAt(0) == 's' || saisieUtilisateur.charAt(0) == 'z') {
+			} 
+			
+			else if (saisieUtilisateur.charAt(0)=='q') {
+				clear();
+
+			System.out.println("\n    _");
+			System.out.println("   { )_");
+			System.out.println("    /  >>   _");
+			System.out.println("   / /\\°\\__/.°   Vous avez fait demi-tour!!");
+			System.out.println("  °   //°--°    Et avez pris la fuite tel un lache!!");
+			System.out.println("      \\\\       Votre score final est :");
+			System.out.println("      (/\n");
+
+			outgame=true;
+							
+			}
+			
+			
+			else if (saisieUtilisateur.charAt(0) == 's' || saisieUtilisateur.charAt(0) == 'z') {
 				clear();
 				
 				if(!billy.getItems().getInventory().isEmpty()) {
