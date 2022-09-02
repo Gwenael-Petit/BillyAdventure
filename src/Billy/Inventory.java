@@ -6,6 +6,18 @@ public class Inventory {
 	private ArrayList <Powerup> inventory = new ArrayList<Powerup>();
 	private boolean inventoryFull;
 	
+	public boolean isInventoryFull() {
+		return inventoryFull;
+	}
+
+	public void setInventoryFull(boolean inventoryFull) {
+		this.inventoryFull = inventoryFull;
+	}
+
+	public ArrayList<Powerup> getInventory() {
+		return inventory;
+	}
+
 	public boolean isFull() {
 		if(!this.inventory.isEmpty()) {
 			return this.inventoryFull = true;
@@ -20,7 +32,17 @@ public class Inventory {
 	}
 	
 	public String toStringInventory() {
-		return inventory.toString();
+		int nbrArc=0;
+		int nbrPioche=0;
+		for(int i=0;i<inventory.size();i++) {
+			if(inventory.get(i).equals(Powerup.ARC)) {
+				nbrArc= nbrArc + 1;
+			}if(inventory.get(i).equals(Powerup.PIOCHE)) {
+				nbrPioche= nbrPioche + 1;
+			}
+		}
+		return "Dans l'inventaire il y a "+ nbrArc +" Arcs, "+ nbrPioche + " Pioches.";
 	}
+	
 }
 
