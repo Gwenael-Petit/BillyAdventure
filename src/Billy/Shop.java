@@ -8,27 +8,28 @@ public class Shop {
 	public static ArrayList<String> rayon = new ArrayList<String>();
 	public Random rand = new Random() ;
 	
-	public void getItem(Billy billy) {
+	public static void getItem(Billy billy) {
 		
-		System.out.println("Bonjour mon jeune ami ! Bienvenu dans mon humble Shop, AKA demeure, boutique personelle et professionnelle ! ԅ(≖‿≖ԅ)");
-		
-		Shop.displayShop();
+		System.out.println("Bonjour mon jeune ami ! Bienvenu dans mon humble Shop, AKA demeure, boutique personelle et professionnelle ! ԅ(≖‿≖ԅ) \n Tu possèdes " + billy.getBourse() + " gems.");
 		
 		Scanner sc = new Scanner (System.in);
 		
 		int choixItem = 0;
-		choixItem = sc.nextInt();
+		boolean choix = false ; 
 		
-		while(choixItem!=4) {
+		while(!choix) {
+			
+			Shop.displayShop();
+			choixItem = sc.nextInt();
 			
 		
 			if (choixItem==1) {
 				if (billy.getBourse()>=35) {
 					billy.setBourse(billy.getBourse()-35);
 					billy.setLife(billy.getLife()+1);
-					System.out.println("Merci bien jeune voyageur talentueux du nom de Billy! (Billy le bougre devrai-je direeeee...)");
+					System.out.println("Merci bien jeune voyageur talentueux du nom de Billy! (Billy le bougre devrai-je direeeee...) \n");
 				} else {
-					System.out.println("La fée c'est une Queen, elle vaut plus cher que ça en fait, brow !! (ง'̀-'́)ง ");
+					System.out.println("La fée c'est une Queen, elle vaut plus cher que ça en fait, brow !! (ง'̀-'́)ง  \n");
 				}
 			} else if (choixItem==2) {
 				if (billy.getBourse()>=25) {
@@ -46,18 +47,18 @@ public class Shop {
 				}else {
 					System.out.println("T'es complètement marteau !! Cet engin vaut plus cher que ça, brow. (Ծ‸ Ծ) \n");
 				}
-			}else if (choixItem == 4) {
+			}else if (choixItem == 4 ) {
 				System.out.println("Merci d'et' passé, BROW !! (☞ﾟヮﾟ)☞  \n");
+				choix = true;
 			}
-			
-			Shop.displayShop();
-			choixItem = sc.nextInt();
+		
 			
 		}
+		
 	}
 	
 	
-	public void setShop() {
+	public static void setShop() {
 		rayon.add("Fée, 35 gems.");
 		rayon.add("Arc, 25 gems.");
 		rayon.add("Pioche, 25 gems.");

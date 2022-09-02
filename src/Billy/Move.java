@@ -8,6 +8,7 @@ public class Move {
 	int shopkeeperSpawnRate = 5;
 	int fairySpawnRate = 0;
 	
+	Scanner sc = new Scanner (System.in);
 	
 	MAP moveMap (MAP map) {
 		//mur du haut
@@ -116,7 +117,23 @@ public class Move {
 				System.out.println("Vous avez gagné une pioche");
 			}
 		}else if (map.map.get(1).get(1).charAt(0) == 'S') {
-			System.out.println("boutique");
+			System.out.println("Oh ! Un marchand est sur votre route. Voulez vous voir sa boutique ? \n 1. Oui \n 2. Non");
+			
+			int choixOption = 0 ;
+			
+			while (choixOption != 1 && choixOption !=2) {
+				
+				choixOption = sc.nextInt();
+				
+				if (choixOption==1) {
+					Shop.setShop();
+					Shop.getItem(billy);
+				} 
+				
+					
+			}
+			
+			Main.clear();
 		} else if(map.map.get(1).get(1).charAt(0) == 'F') {
 			System.out.println("Une fée ! Vous gagnez une vie supplémentaire !");
 			billy.setLife(billy.getLife()+1);
