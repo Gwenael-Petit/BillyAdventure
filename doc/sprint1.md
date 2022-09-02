@@ -5,6 +5,7 @@
 ### Ce que nous avons fait durant ce sprint
 Le joueur aurait du pouvoir se déplacer à travers le tunnel du donjon en appuyant sur ENTREE. 
 Cependant lors de la démo, nous avions le système de déplacement et la génération de la map aléatoire mais celui-ci n'étais pas encore intégré à notre Class Main.
+Création d'une class Main, MAP (génération de la map) , Billy (personnage principale ses attributs et diffèrentes méthodes).
 
 ### Ce que nous allons faire durant le prochain sprint
 Le joueur pourra se déplacer à travers le tunnel du donjon en appuyant sur ENTREE ainsi que sur la route rencontrer des monstres ou des bonus d'améliorations.
@@ -12,7 +13,7 @@ Le joueur pourra se déplacer à travers le tunnel du donjon en appuyant sur ENT
 ## Rétrospective
 
 ### Sur quoi avons nous butté ?
-Nous avons eu des difficultés par rapport à Git et des contraintes de conceptions (programmation multithread).
+Nous avons eu des difficultés par rapport à Git et d'organisation.
 
 ### PDCA
 * De tous ces éléments quel est celui que vous voulez améliorer ? les déplacements.
