@@ -59,9 +59,11 @@ public class Shop {
 	
 	
 	public static void setShop() {
-		rayon.add("Fée, 35 gems.");
-		rayon.add("Arc, 25 gems.");
-		rayon.add("Pioche, 25 gems.");
+		if (rayon.isEmpty()) {
+			rayon.add("Fée, 35 gems.");
+			rayon.add("Arc, 25 gems.");
+			rayon.add("Pioche, 25 gems.");
+		}
 	}
 	
 	public static void displayShop() {
@@ -76,14 +78,14 @@ public class Shop {
 		
 	}
 	
-	public static void main(String[] args) {
-		Shop shop = new Shop();
-		Inventory inventaire = new Inventory();
-		Billy billy = new Billy(3,inventaire,0,0);
-		
-		shop.setShop();
-		shop.getItem(billy);
-		
-	}
+//	public static void main(String[] args) {
+//		Shop shop = new Shop();
+//		Inventory inventaire = new Inventory();
+//		Billy billy = new Billy(3,inventaire,0,0);
+//		
+//		shop.setShop();
+//		shop.getItem(billy);
+//		
+//	}
 
 }
