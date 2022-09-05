@@ -186,7 +186,8 @@ public class Move {
 	 
 	 
 	 public void difficulty (int score) {
-		 this.monsterSpawnRate = score/50 * this.monsterSpawnRate;
+		 if(score >= 50 && (score % 50) == 0 && this.monsterSpawnRate <= 80)
+		 this.monsterSpawnRate = this.monsterSpawnRate + 5;
 	 }
 	
 	public static void main(String[] args) {
