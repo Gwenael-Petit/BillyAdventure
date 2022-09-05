@@ -105,7 +105,7 @@ public class Move {
 	
 		} else if (map.map.get(1).get(1).charAt(0) == 'G') {
 			System.out.println("Vous avez ramassé une gemme !");
-			billy.setBourse(billy.getBourse()+1);
+			billy.setBourse(billy.winBourse()+1);
 		} else if (map.map.get(1).get(1).charAt(0) == 'P') {
 			Random random = new Random();
 			int value = random.nextInt(2);
