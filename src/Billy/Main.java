@@ -103,6 +103,12 @@ public class Main {
 				System.out.println(billy.getItems().toStringInventory());
 				System.out.println("vous avez " + billy.getBourse()+ " gemmes.");
 			}
+			else {
+				clear();
+				bouger.detect(map, billy);
+				bouger.moveMap(map);
+				bouger.moveRight(map);
+			}
 			int s = billy.getScore();
 			if(billy.isDead()) {
 				System.out.println("Buuuuuuuuuuuuuuuurg !!!!!!! \nVous êtes décéday (c triste ¯\\_(ツ)_/¯ ).");

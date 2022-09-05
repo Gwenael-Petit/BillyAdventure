@@ -59,6 +59,6 @@ public class Save {
 		int result = load();
 		System.out.println(result);
 		
-		loadText("./csv/test");
+		Save.loadText("./csv/test");
 	}
 }
