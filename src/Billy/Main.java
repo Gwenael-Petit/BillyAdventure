@@ -112,7 +112,7 @@ public class Main {
 			int s = billy.getScore();
 			if(billy.isDead()) {
 				
-				Save.loadText("./csv/Ecran_game_over");
+				Save.loadText("./textes/Ecran_game_over");
 								
 				System.out.println("Votre score final est de : " + billy.getScore() + ".");
 				System.out.println("Votre dernier score était de : " + Save.load() + ".");
@@ -141,7 +141,7 @@ public class Main {
 		boolean continuer = false;
 		while(!continuer) {
 			
-			Save.loadText("./csv/Ecran_titre");
+			Save.loadText("./textes/Ecran_titre");
 			
 			Scanner sc = new Scanner (System.in);
 			String suite = sc.nextLine();
