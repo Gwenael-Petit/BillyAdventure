@@ -37,12 +37,16 @@ public class Main {
 				bouger.detect(map, billy);
 				bouger.moveRight(map);
 				bouger.moveMap(map);
+				billy.setScore(billy.getScore() + 1);
+				bouger.difficulty(billy.getScore());
 				
 			}else if (saisieUtilisateur.charAt(0)=='d' || saisieUtilisateur.charAt(0)==' ') {
 				clear();
 				bouger.detect(map, billy);
 				bouger.moveRight(map);
 				bouger.moveMap(map);
+				billy.setScore(billy.getScore() + 1);
+				bouger.difficulty(billy.getScore());
 			} 
 			
 			else if (saisieUtilisateur.charAt(0)=='q') {
@@ -77,6 +81,8 @@ public class Main {
 							i+=1;
 							billy.getItems().removeItemsInInventory(Powerup.PIOCHE);
 							bouger.moveVertically(map);
+							billy.setScore(billy.getScore() + 1);
+							bouger.difficulty(billy.getScore());
 							value = true;
 							
 						}
@@ -110,7 +116,6 @@ public class Main {
 				bouger.moveMap(map);
 				bouger.moveRight(map);
 			}
-			int s = billy.getScore();
 			if(billy.isDead()) {
 				
 				Save.loadText("./textes/Ecran_game_over");
@@ -120,13 +125,11 @@ public class Main {
 				Save.save(billy.getScore());
 				break;
 			}
-			System.out.println("Score: "+s);
+			System.out.println("Score: "+billy.getScore());
 			for(int i = 0; i < billy.getLife(); i++) {
 				System.out.print('❤');
 			}
 			System.out.println();
-			billy.setScore(s + 1);
-			bouger.difficulty(billy.getScore());
 			
 		}
 			
