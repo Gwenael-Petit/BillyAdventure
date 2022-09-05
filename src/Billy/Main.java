@@ -111,7 +111,9 @@ public class Main {
 			}
 			int s = billy.getScore();
 			if(billy.isDead()) {
-				System.out.println("Buuuuuuuuuuuuuuuurg !!!!!!! \nVous êtes décéday (c triste ¯\\_(ツ)_/¯ ).");
+				
+				Save.loadText("./csv/Ecran_game_over");
+								
 				System.out.println("Votre score final est de : " + billy.getScore() + ".");
 				System.out.println("Votre dernier score était de : " + Save.load() + ".");
 				Save.save(billy.getScore());
@@ -138,11 +140,9 @@ public class Main {
 	public static void ecranTitre() {
 		boolean continuer = false;
 		while(!continuer) {
-			System.out.println("HEYYY BILLYYY\n");
-			System.out.println("Tu viens de tomber dans un trou qui t'as amené dans un donjon, too bad ¯\\_(ツ)_/¯. \n\nAu cours de ton échappé tu croiseras des Monstres (☠), \ndes Power-up (★) qui pourront t'aider à échapper aux monstres, \ndes Gemmes (♦) que tu pourras collecter afin d'acheter des objets à un Marchand (☖). \n\nBon courage pour survivre!");
 			
+			Save.loadText("./csv/Ecran_titre");
 			
-			System.out.println("\nAppuyer sur une touche pour continuer.");
 			Scanner sc = new Scanner (System.in);
 			String suite = sc.nextLine();
 			continuer = true;
