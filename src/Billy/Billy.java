@@ -9,9 +9,6 @@ public class Billy {
 	private int score = 0 ;
 	private int bourse = 0 ;
 	
-	public static void main (String [] args ) {
-		
-	}
 	
 	public Billy (int life, Inventory items, int score, int bourse) {
 		this.life= life;
