@@ -121,13 +121,13 @@ public class Move {
 		}else if (map.map.get(1).get(1).charAt(0) == '☖') {
 			System.out.println("Oh ! Un marchand est sur votre route. Voulez vous voir sa boutique ? \n 1. Oui \n 2. Non");
 			
-			int choixOption = 0 ;
+			String choixOption ="p";
 			
-			while (choixOption != 1 && choixOption !=2) {
+			while (choixOption.charAt(0)!='1' && choixOption.charAt(0)!='2') {
 				
-				choixOption = sc.nextInt();
+				choixOption = sc.next();
 				
-				if (choixOption==1) {
+				if (choixOption.charAt(0)=='1') {
 					Main.clear();
 					Shop.setShop();
 					Shop.getItem(billy);

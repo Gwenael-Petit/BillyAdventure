@@ -47,38 +47,5 @@ public ArrayList <ArrayList <String>> Generation_Map(){
 }
 
 
-
-/*public static void main(String[] args){
-	
-	MAP map = new MAP();
-	
-	map.Generation_Map();
-	
-	String l0 = "";
-	for(int i = 0; i < map.map.get(0).size(); i++) {
-		l0 += map.map.get(0).get(i);
-	}
-	
-	String l1 = "";
-	for(int i = 0; i < map.map.get(1).size(); i++) {
-		l1 += map.map.get(1).get(i);
-	}
-	
-	String l2 = "";
-	for(int i = 0; i < map.map.get(2).size(); i++) {
-		l2 += map.map.get(2).get(i);
-	}
-	
-	System.out.println(l0);
-	System.out.println(l1);
-	System.out.println(l2);
-	 
-	for(int clear = 0; clear < 1000; clear++)
-	  {
-	     System.out.println("\n") ;
-	  }
-	
-}*/
-
 }
 
