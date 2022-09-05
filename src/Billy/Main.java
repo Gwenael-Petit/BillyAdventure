@@ -112,6 +112,10 @@ public class Main {
 				break;
 			}
 			System.out.println("Score: "+s);
+			for(int i = 0; i < billy.getLife(); i++) {
+				System.out.print('❤');
+			}
+			System.out.println();
 			billy.setScore(s + 1);
 			bouger.difficulty(billy.getScore());
 			
