@@ -10,20 +10,23 @@ public class Shop {
 	
 	public static void getItem(Billy billy) {
 		
-		System.out.println("Bonjour mon jeune ami ! Bienvenu dans mon humble Shop, AKA demeure, boutique personelle et professionnelle ! ԅ(≖‿≖ԅ) \n Tu possèdes " + billy.getBourse() + " gemmes.");
+		System.out.println("Bonjour mon jeune ami ! Bienvenu dans mon humble Shop, AKA demeure, AKA boutique personelle et professionnelle ! ԅ(≖‿≖ԅ) \nTu possèdes " + billy.getBourse() + " gemmes.\nQue veux-tu acheter?");
 		
 		Scanner sc = new Scanner (System.in);
 		
-		int choixItem = 0;
+		String choixItem;
 		boolean choix = false ; 
 		
 		while(!choix) {
 			
+			
 			Shop.displayShop();
-			choixItem = sc.nextInt();
+			choixItem = sc.next();
+			
+			
 			
 		
-			if (choixItem==1) {
+			if (choixItem.charAt(0)=='1') {
 				if (billy.getBourse()>=35) {
 					billy.setBourse(billy.getBourse()-35);
 					billy.setLife(billy.getLife()+1);
@@ -33,7 +36,7 @@ public class Shop {
 					Main.clear();
 					System.out.println("La fée c'est une Queen, elle vaut plus cher que ça en fait, brow !! (ง'̀-'́)ง  \n");
 				}
-			} else if (choixItem==2) {
+			} else if (choixItem.charAt(0)=='2') {
 				if (billy.getBourse()>=25) {
 					billy.getItems().addItemsInInventory(Powerup.ARC);
 					billy.setBourse(billy.getBourse()-25);
@@ -43,7 +46,7 @@ public class Shop {
 					Main.clear();
 					System.out.println("Hé brow t'as pas de thune là, te fou pas d'moi !! (Ծ‸ Ծ) \n");
 				}
-			} else if (choixItem==3) {
+			} else if (choixItem.charAt(0)=='3') {
 				if (billy.getBourse()>=25) {
 					billy.getItems().addItemsInInventory(Powerup.PIOCHE);
 					billy.setBourse(billy.getBourse()-25);
@@ -51,18 +54,24 @@ public class Shop {
 					System.out.println("Merci bien jeune voyageur talentueux du nom de Billy! (Billy le bougre devrai-je direeeee...) \n");
 				}else {
 					Main.clear();
-					System.out.println("T'es complètement marteau !! Cet engin vaut plus cher que ça, brow. (Ծ‸ Ծ) \n");
+					System.out.println("T'es complètement marteau !! Cet engin vaut bien plus cher que ça, brow. (Ծ‸ Ծ) \n");
 				}
-			}else if (choixItem == 4 ) {
+			}else if (choixItem.charAt(0)=='4') {
 				System.out.println("Merci d'et' passé, BROW !! (☞ﾟヮﾟ)☞  \n");
 				choix = true;
 			}
 		
-			
 		}
+		
+		Shop.clear();
 		
 	}
 	
+	public static void clear () {
+		for (int i = 0; i<25; i++) {
+			System.out.println("\n");
+		}
+	}
 	
 	public static void setShop() {
 		if (rayon.isEmpty()) {
