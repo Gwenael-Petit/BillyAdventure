@@ -9,6 +9,7 @@ public class Main {
 	public static Inventory inventaire = new Inventory();
 	public static Billy billy = new Billy(3,inventaire,0,0);
 	
+	
 	public static void main (String [] args ) {
 		
 		ecranTitre();
