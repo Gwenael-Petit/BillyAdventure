@@ -86,8 +86,7 @@ public class Billy {
 	
 	public int winBourse () {
 		Random rand = new Random() ;
-		this.bourse=this.bourse + rand.nextInt(11) ;
-		return this.bourse;
+		return rand.nextInt(10) +1; 
 	}
 	
 	
