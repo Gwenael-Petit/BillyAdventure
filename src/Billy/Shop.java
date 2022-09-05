@@ -10,7 +10,7 @@ public class Shop {
 	
 	public static void getItem(Billy billy) {
 		
-		System.out.println("Bonjour mon jeune ami ! Bienvenu dans mon humble Shop, AKA demeure, AKA boutique personelle et professionnelle ! ԅ(≖‿≖ԅ) \nTu possèdes " + billy.getBourse() + " gemmes.\nQue veux-tu acheter?");
+		System.out.println("Bonjour mon jeune ami ! Bienvenu dans mon humble Shop, AKA demeure, AKA boutique personelle et professionnelle ! ԅ(≖‿≖ԅ) \nTu possèdes " + billy.getBourse() + " gemmes.\nQue veux-tu acheter?\n");
 		
 		Scanner sc = new Scanner (System.in);
 		

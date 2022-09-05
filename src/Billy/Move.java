@@ -121,7 +121,7 @@ public class Move {
 		}else if (map.map.get(1).get(1).charAt(0) == '☖') {
 			System.out.println("Oh ! Un marchand est sur votre route. Voulez vous voir sa boutique ? \n 1. Oui \n 2. Non");
 			
-			String choixOption ="";
+			String choixOption ="p";
 			
 			while (choixOption.charAt(0)!='1' && choixOption.charAt(0)!='2') {
 				
