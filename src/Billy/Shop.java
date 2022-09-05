@@ -64,7 +64,19 @@ public class Shop {
 					Save.loadText("./textes/Ecran_shop");
 					System.out.println("T'es complètement marteau !! Cet engin vaut bien plus cher que ça, brow. (Ծ‸ Ծ) \n");
 				}
-			}else if (choixItem.charAt(0)=='4') {
+			}else if(choixItem.charAt(0)=='4') {
+				if (billy.getBourse()>=66) {
+					billy.setLife(billy.getLife()+3);
+					billy.setBourse(billy.getBourse()-66);
+					Main.clear();
+					Save.loadText("./textes/Ecran_shop");
+					System.out.println("Merci bien jeune voyageur talentueux du nom de Billy! (Billy le bougre devrai-je direeeee...) \n");
+				}else {
+					Main.clear();
+					Save.loadText("./textes/Ecran_shop");
+					System.out.println("T'es complètement marteau !! Cet engin vaut bien plus cher que ça, brow. (Ծ‸ Ծ) \n");
+				}
+			}else if (choixItem.charAt(0)=='5') {
 				Save.loadText("./textes/Ecran_shop");
 				System.out.println("Merci d'et' passé, BROW !! (☞ﾟヮﾟ)☞  \n");
 				choix = true;
@@ -87,6 +99,7 @@ public class Shop {
 			rayon.add("Fée, 35 gems.");
 			rayon.add("Arc, 25 gems.");
 			rayon.add("Pioche, 25 gems.");
+			rayon.add("Armure, 66 gems.");
 		}
 	}
 	
@@ -97,7 +110,7 @@ public class Shop {
 		}
 		//Save.loadText("./textes/Ecran_shop");
 		System.out.println(res);
-		System.out.println("4. Quitter le shop");
+		System.out.println("5. Quitter le shop");
 		
 		
 		

@@ -1,5 +1,5 @@
 package Billy;
 
 public enum Powerup {
-	PIOCHE, ARC, FEE;
+	PIOCHE, ARC, FEE, ARMURE;
 }
