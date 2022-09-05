@@ -50,19 +50,19 @@ public class Move {
 		 int value = random.nextInt(100);
 		 //spawn monstre
 		 if(value > 100 - monsterSpawnRate) {
-			 map.map.get(1).add("M");
+			 map.map.get(1).add("☠");
 		//spawn gem
 		 } else if (value > 100 - monsterSpawnRate - gemSpawnRate) {
-			 map.map.get(1).add("G");
+			 map.map.get(1).add("♦");
 		//spawn power up
 		 } else if (value > 100 - monsterSpawnRate - gemSpawnRate - powerupSpawnRate) {
-			 map.map.get(1).add("P");
+			 map.map.get(1).add("❀");
 		//spawn boutique
 		 } else if (value > 100 - monsterSpawnRate - gemSpawnRate - powerupSpawnRate - shopkeeperSpawnRate) {
 			 map.map.get(1).add("S");
 		//spawn fée
 		 } else if(value > 100 - monsterSpawnRate - gemSpawnRate - powerupSpawnRate - shopkeeperSpawnRate - fairySpawnRate){
-			 map.map.get(1).add("F");
+			 map.map.get(1).add("♥");
 	     //spawn caractère vide
 		 } else {
 			 map.map.get(1).add(" ");
@@ -73,7 +73,7 @@ public class Move {
 	
 	void detect (MAP map, Billy billy) {
 		//Monstre
-		if(map.map.get(1).get(1).charAt(0) == 'M') {
+		if(map.map.get(1).get(1).charAt(0) == '☠') {
 			if(!billy.getItems().getInventory().isEmpty()) {
 				int i = 0;
 				boolean foundItem = false;
@@ -103,10 +103,10 @@ public class Move {
 			}
 			
 	
-		} else if (map.map.get(1).get(1).charAt(0) == 'G') {
+		} else if (map.map.get(1).get(1).charAt(0) == '♦') {
 			System.out.println("Vous avez ramassé une gemme !");
 			billy.setBourse(billy.winBourse()+1);
-		} else if (map.map.get(1).get(1).charAt(0) == 'P') {
+		} else if (map.map.get(1).get(1).charAt(0) == '❀') {
 			Random random = new Random();
 			int value = random.nextInt(2);
 			if (value == 0) {
@@ -116,7 +116,7 @@ public class Move {
 				billy.getItems().addItemsInInventory(Powerup.PIOCHE);
 				System.out.println("Vous avez gagné une pioche");
 			}
-		}else if (map.map.get(1).get(1).charAt(0) == 'S') {
+		}else if (map.map.get(1).get(1).charAt(0) == "S") {
 			System.out.println("Oh ! Un marchand est sur votre route. Voulez vous voir sa boutique ? \n 1. Oui \n 2. Non");
 			
 			int choixOption = 0 ;
@@ -134,7 +134,7 @@ public class Move {
 			}
 			
 			Main.clear();
-		} else if(map.map.get(1).get(1).charAt(0) == 'F') {
+		} else if(map.map.get(1).get(1).charAt(0) == '♥') {
 			System.out.println("Une fée ! Vous gagnez une vie supplémentaire !");
 			billy.setLife(billy.getLife()+1);
 		}
