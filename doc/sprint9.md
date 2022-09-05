@@ -3,26 +3,24 @@
 ## Démo + Planification du sprint suivant
 
 ### Ce que nous avons fait durant ce sprint
-Ajout des Boss afin d'intégrer la notion d'héritage et de polymorphisme. 
+Ajout des Boss.
 Finition des tests unitaires. 
-
-
-### Ce que nous allons faire durant le prochain sprint
-Peaufiner et règler les derniers soucis/bugs.
+Création d'une armure qui augmente la vie du personnage.
 
 ## Rétrospective
 
 ### Sur quoi avons nous butté ?
-Rendre le jeu éxécutable à partir d'une jar car la jar ne voulait pas intégrer nos fichiers externes tel que le csv de sauvegarde ou encore les diffèrents fichiers texte contenant l'ascii art. Nous avons eu de tout petits conflits git à la fin du sprint mais rien de bien méchant ainsi que des soucis de class lors de l'intégration de nos test unitaires.
+Un petit soucis dans l'intégration des test avec un petit oubli @Test.
 
 
 ### PDCA
 * De tous ces éléments quel est celui que vous voulez améliorer ?
-La jar executable et un peu de contrôle de saisie.
+	Faire un peu plus attention lors de l'ecriture de test.
+	Faire un peu plus de covering.
 * Comment pouvez-vous mesurer qu'il s'améliore ?
-Nous avons reussi à rendre utilisable les fichiers externes lorsque l'on execute la jar.
+	moins de soucis lors des test et plus de pourcentage de covering.
 * Qu'allez-vous tester pour l'améliorer ?
-Générer la jar dans le fichier source du projet.
+	Intégrer plus de test.
 
 # Mémo
 N’oubliez pas d’ajouter une photo du radiateur d’information au moment de la rétrospective.
