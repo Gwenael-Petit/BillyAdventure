@@ -21,7 +21,7 @@ public class Main {
 		System.out.println(d);
 		
 		Move bouger = new Move () ;
-		for (int i = 0; i < 150; i++) {
+		for (int i = 0; i < 130; i++) {
 			bouger.moveRight(map);
 			bouger.moveMap(map);
 		}

@@ -15,7 +15,7 @@ public ArrayList <String> Generation_Mur(){
 	Random random = new Random();
 	int value;
 	
-	for (int i =0; i<190; i+=1) {
+	for (int i =0; i<158; i+=1) {
 		value = random.nextInt(100);
 		
 		if (value>30) {
@@ -35,7 +35,7 @@ public ArrayList <ArrayList <String>> Generation_Map(){
 	ArrayList <String> Billy = new ArrayList <String>();
 	Billy.add("B");
 	
-	for (int i =0; i<189; i+=1) {
+	for (int i =0; i<157; i+=1) {
 		Billy.add(" ");
 	}
 	
