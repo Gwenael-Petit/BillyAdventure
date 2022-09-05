@@ -4,15 +4,16 @@ import java.util.Scanner;
 
 public class Main {
 	
-	private static Scanner sc = new Scanner (System.in);
+	private static Scanner sc = new Scanner (System.in);		
+	public static MAP map = new MAP();
+	public static Inventory inventaire = new Inventory();
+	public static Billy billy = new Billy(3,inventaire,0,0);
 	
 	public static void main (String [] args ) {
 		
 		ecranTitre();
 		
-		MAP map = new MAP();
-		Inventory inventaire = new Inventory();
-		Billy billy = new Billy(3,inventaire,0,0);
+
 		
 		boolean outgame=false;
 		
