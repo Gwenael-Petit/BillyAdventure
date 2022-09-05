@@ -20,13 +20,11 @@ Rendre le jeu éxécutable à partir d'une jar car la jar ne voulait pas intégr
 
 ### PDCA
 * De tous ces éléments quel est celui que vous voulez améliorer ?
-
+La jar executable et un peu de contrôle de saisie.
 * Comment pouvez-vous mesurer qu'il s'améliore ?
-
-* Quelles sont toutes les options possible pour l'améliorer ?
-
+Nous avons reussi à rendre utilisable les fichiers externes lorsque l'on execute la jar.
 * Qu'allez-vous tester pour l'améliorer ?
-
+Générer la jar dans le fichier source du projet.
 
 # Mémo
 N’oubliez pas d’ajouter une photo du radiateur d’information au moment de la rétrospective.
