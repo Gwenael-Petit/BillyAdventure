@@ -128,6 +128,7 @@ public class Move {
 				choixOption = sc.nextInt();
 				
 				if (choixOption==1) {
+					Main.clear();
 					Shop.setShop();
 					Shop.getItem(billy);
 				} 

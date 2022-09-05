@@ -10,7 +10,7 @@ public class Shop {
 	
 	public static void getItem(Billy billy) {
 		
-		System.out.println("Bonjour mon jeune ami ! Bienvenu dans mon humble Shop, AKA demeure, boutique personelle et professionnelle ! ԅ(≖‿≖ԅ) \n Tu possèdes " + billy.getBourse() + " gems.");
+		System.out.println("Bonjour mon jeune ami ! Bienvenu dans mon humble Shop, AKA demeure, boutique personelle et professionnelle ! ԅ(≖‿≖ԅ) \n Tu possèdes " + billy.getBourse() + " gemmes.");
 		
 		Scanner sc = new Scanner (System.in);
 		
@@ -27,24 +27,30 @@ public class Shop {
 				if (billy.getBourse()>=35) {
 					billy.setBourse(billy.getBourse()-35);
 					billy.setLife(billy.getLife()+1);
+					Main.clear();
 					System.out.println("Merci bien jeune voyageur talentueux du nom de Billy! (Billy le bougre devrai-je direeeee...) \n");
 				} else {
+					Main.clear();
 					System.out.println("La fée c'est une Queen, elle vaut plus cher que ça en fait, brow !! (ง'̀-'́)ง  \n");
 				}
 			} else if (choixItem==2) {
 				if (billy.getBourse()>=25) {
 					billy.getItems().addItemsInInventory(Powerup.ARC);
 					billy.setBourse(billy.getBourse()-25);
+					Main.clear();
 					System.out.println("Merci bien jeune voyageur talentueux du nom de Billy! (Billy le bougre devrai-je direeeee...) \n");
 				}else {
+					Main.clear();
 					System.out.println("Hé brow t'as pas de thune là, te fou pas d'moi !! (Ծ‸ Ծ) \n");
 				}
 			} else if (choixItem==3) {
 				if (billy.getBourse()>=25) {
 					billy.getItems().addItemsInInventory(Powerup.PIOCHE);
 					billy.setBourse(billy.getBourse()-25);
+					Main.clear();
 					System.out.println("Merci bien jeune voyageur talentueux du nom de Billy! (Billy le bougre devrai-je direeeee...) \n");
 				}else {
+					Main.clear();
 					System.out.println("T'es complètement marteau !! Cet engin vaut plus cher que ça, brow. (Ծ‸ Ծ) \n");
 				}
 			}else if (choixItem == 4 ) {
