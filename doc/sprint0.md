@@ -4,7 +4,8 @@
 
 ### Ce que nous avons fait durant ce sprint
 Noous avons défini le concept du jeu: 
-Nous avions d'abord décidé de réaliser un jeu du style Pacman. Cependant, à cause de la gestion du temps réel, nécessitant une programmation "multi thread", nous avons changé de concept. Nous avons donc décidé de créer un jeu dans lequel un personnage nommé billy doit ce déplacer dans un donjon et aller le plus loin possible. Seul Problème, Billy rencontre de nombreux monstres sur son passage. Il peut collecter des armes pour les tuer, ou une pioche pour creuser et monter ou descendre d'un étage. 
+Nous avions d'abord décidé de réaliser un jeu du style Pacman. Cependant, à cause de la gestion du temps réel, nécessitant une programmation "multi thread", nous avons changé de concept. Nous avons donc décidé de créer un jeu dans lequel un personnage nommé billy doit ce déplacer dans un donjon et aller le plus loin possible. Seul Problème, Billy rencontre de nombreux monstres sur son passage. Il peut collecter des armes pour les tuer, ou une pioche pour creuser et monter ou descendre d'un étage.
+Rédaction du sprint numéro 0. 
 
 ### Ce que nous allons faire durant le prochain sprint
 Pouvoir déplacer Billy dans le donjon

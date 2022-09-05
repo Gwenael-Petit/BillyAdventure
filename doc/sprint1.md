@@ -6,6 +6,7 @@
 Le joueur aurait du pouvoir se déplacer à travers le tunnel du donjon en appuyant sur ENTREE. 
 Cependant lors de la démo, nous avions le système de déplacement et la génération de la map aléatoire mais celui-ci n'étais pas encore intégré à notre Class Main.
 Création d'une class Main, MAP (génération de la map) , Billy (personnage principale ses attributs et diffèrentes méthodes).
+Rédaction du sprint numéro 1.
 
 ### Ce que nous allons faire durant le prochain sprint
 Le joueur pourra se déplacer à travers le tunnel du donjon en appuyant sur ENTREE ainsi que sur la route rencontrer des monstres ou des bonus d'améliorations.

@@ -3,18 +3,19 @@
 ## Démo + Planification du sprint suivant
 
 ### Ce que nous avons fait durant ce sprint
-Faire de l'héritage
-Finir les graphismes du shop 
-Creer un executable 
-
+Intégrer la notion d'héritage et polymorphisme dans la composition de notre jeu.
+Finir les graphismes (ascii art) du shop. 
+Créer un éxecutable jar du jeu. 
+Création des Tests unitaires.
+Continuation des contôles de saisies utilisateurs.
 
 ### Ce que nous allons faire durant le prochain sprint
-
+Peaufiner et règler les derniers soucis/bugs.
 
 ## Rétrospective
 
 ### Sur quoi avons nous butté ?
-
+Rendre le jeu éxécutable à partir d'une jar car la jar ne voulait pas intégrer nos fichiers externes tel que le csv de sauvegarde ou encore les diffèrents fichiers texte contenant l'ascii art. Nous avons eu de tout petits conflits git à la fin du sprint mais rien de bien méchant ainsi que des soucis de class lors de l'intégration de nos test unitaires.
 
 
 ### PDCA

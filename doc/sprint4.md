@@ -8,6 +8,7 @@ Stocker et et afficher les items présent dans notre inventaire pour les utilise
 Calculer et afficher le score en fonction de l'avancement du joueur.
 Afficher une aide utilisateur pour le guider pendant la partie.
 Acheter un item dans la boutique et le stocker dans l'inventaire.
+Rédaction numéro 4.
 
 ### Ce que nous allons faire durant le prochain sprint
 Terminer la boutique pour qu'elle soit fonctionnelle.

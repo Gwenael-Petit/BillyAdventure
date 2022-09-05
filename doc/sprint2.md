@@ -10,7 +10,7 @@ Mise en place d'une class inventaire pour le personnage principale.
 Création d'une class Move (Déplacement de la map vers la droite).
 Création d'une class Monstre (monstre avec ses différentes caractéristiques et methodes).
 Création d'une enum Powerup (enum contenant nos différents bonus dans le jeu comme une pioche ou un arc).
-
+Rédaction du sprint numéro 2.
 
 ### Ce que nous allons faire durant le prochain sprint
 Les diffèrentes interactions avec les bonus que l'on croise lors de notre partie (ex: les dégâts que nous inflige le monstre

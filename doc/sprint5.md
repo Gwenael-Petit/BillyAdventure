@@ -5,7 +5,8 @@
 ### Ce que nous avons fait durant ce sprint
 Nous avons terminé le Shop, et nous avons peaufiné en ajoutant une manière de quiter le shop, mais aussi de choisir ou non si l'on voulait y accéder en plein milieu de la partie. 
 Nous avons ajouté une touche pour quitter le jeu, il est désormais possible de quitter le jeu sans avoir à mourir. 
-Nous avons ajouté une fonctionnalité qui permet au jeu d'être plus difficile en fonction du score du joueur. 
+Nous avons ajouté une fonctionnalité qui permet au jeu d'être plus difficile en fonction du score du joueur.
+Rédaction du sprint numéro 5. 
 
 ### Ce que nous allons faire durant le prochain sprint
 Nous allons intégrer une sauvegarde des scores
