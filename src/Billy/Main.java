@@ -133,7 +133,7 @@ public class Main {
 		boolean continuer = false;
 		while(!continuer) {
 			System.out.println("HEYYY BILLYYY\n");
-			System.out.println("Tu viens de tomber dans un trou qui t'as amené dans un donjon, too bad ¯\\_(ツ)_/¯. \nBon courage pour survivre!");
+			System.out.println("Tu viens de tomber dans un trou qui t'as amené dans un donjon, too bad ¯\\_(ツ)_/¯. \n\nAu cours de ton échappé tu croiseras des Monstres (M), \ndes Power-up (P) qui pourront t'aider à échapper aux monstres, \ndes Gemmes (G) que tu pourras collecter afin d'acheter des objets à un Marchand (S). \n\nBon courage pour survivre!");
 			
 			
 			System.out.println("\nAppuyer sur une touche pour continuer.");
