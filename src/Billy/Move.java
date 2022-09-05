@@ -56,7 +56,7 @@ public class Move {
 			 map.map.get(1).add("♦");
 		//spawn power up
 		 } else if (value > 100 - monsterSpawnRate - gemSpawnRate - powerupSpawnRate) {
-			 map.map.get(1).add("❀");
+			 map.map.get(1).add("★");
 		//spawn boutique
 		 } else if (value > 100 - monsterSpawnRate - gemSpawnRate - powerupSpawnRate - shopkeeperSpawnRate) {
 			 map.map.get(1).add("☖");
@@ -106,7 +106,7 @@ public class Move {
 		} else if (map.map.get(1).get(1).charAt(0) == '♦') {
 			System.out.println("Vous avez ramassé une gemme !");
 			billy.setBourse(billy.winBourse()+1);
-		} else if (map.map.get(1).get(1).charAt(0) == '❀') {
+		} else if (map.map.get(1).get(1).charAt(0) == '★') {
 			Random random = new Random();
 			int value = random.nextInt(2);
 			if (value == 0) {
@@ -155,7 +155,7 @@ public class Move {
 		}
 		map.map.get(1).set(1, " ");
 		map.map.get(1).set(2, " ");
-		map.map.get(1).set(3, "P");
+		map.map.get(1).set(3, "★");
 		map.map.get(1).set(4, " ");
 		map.map.get(1).set(5, " ");
 		 return map;
