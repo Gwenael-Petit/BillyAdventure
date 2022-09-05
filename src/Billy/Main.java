@@ -53,10 +53,11 @@ public class Main {
 			System.out.println("   / /\\°\\__/.°   Vous avez fait demi-tour!!");
 			System.out.println("  °   //°--°    Et avez pris la fouite tel un lache!!");
 			System.out.println("      \\\\       Votre score final est : "+billy.getScore()+".");
-			System.out.println("      (/\n");
-
+			System.out.println("      (/       Votre dernier score était de : " + Save.load() + ".");
+			
+			Save.save(billy.getScore());
 			outgame=true;
-						
+			
 			
 			break;
 			
@@ -105,6 +106,10 @@ public class Main {
 			int s = billy.getScore();
 			if(billy.isDead()) {
 				System.out.println("Buuuuuuuuuuuuuuuurg !!!!!!! \nVous êtes décéday (c triste ¯\\_(ツ)_/¯ ).");
+				System.out.println("Votre score final est de : " + billy.getScore() + ".");
+				System.out.println("Votre dernier score était de : " + Save.load() + ".");
+				Save.save(billy.getScore());
+				break;
 			}
 			System.out.println("Score: "+s);
 			billy.setScore(s + 1);
