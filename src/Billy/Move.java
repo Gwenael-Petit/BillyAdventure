@@ -59,7 +59,7 @@ public class Move {
 			 map.map.get(1).add("❀");
 		//spawn boutique
 		 } else if (value > 100 - monsterSpawnRate - gemSpawnRate - powerupSpawnRate - shopkeeperSpawnRate) {
-			 map.map.get(1).add("S");
+			 map.map.get(1).add("☖");
 		//spawn fée
 		 } else if(value > 100 - monsterSpawnRate - gemSpawnRate - powerupSpawnRate - shopkeeperSpawnRate - fairySpawnRate){
 			 map.map.get(1).add("♥");
@@ -116,7 +116,7 @@ public class Move {
 				billy.getItems().addItemsInInventory(Powerup.PIOCHE);
 				System.out.println("Vous avez gagné une pioche");
 			}
-		}else if (map.map.get(1).get(1).charAt(0) == "S") {
+		}else if (map.map.get(1).get(1).charAt(0) == '☖') {
 			System.out.println("Oh ! Un marchand est sur votre route. Voulez vous voir sa boutique ? \n 1. Oui \n 2. Non");
 			
 			int choixOption = 0 ;
