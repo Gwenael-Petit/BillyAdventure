@@ -7,6 +7,7 @@ public class Move {
 	int powerupSpawnRate = 10;
 	int shopkeeperSpawnRate = 4;
 	int fairySpawnRate = 0;
+	int bossSpawnRate = 5;
 	
 	Scanner sc = new Scanner (System.in);
 	
@@ -74,31 +75,50 @@ public class Move {
 	void detect (MAP map, Billy billy) {
 		//Monstre
 		if(map.map.get(1).get(1).charAt(0) == '☠') {
+			Monster monster;
+			Random rand = new Random();
+			int nombre = rand.nextInt(100);
+			if (nombre > 100 - bossSpawnRate) {
+				monster = new Boss(true, 2);
+			} else {
+				monster = new Monster(true, 1);
+			}
+			
 			if(!billy.getItems().getInventory().isEmpty()) {
+				if(monster.getStrength() > 1) {
+					System.out.println("Mein gott!!!! Vous avez trouvé un ennemi SUPERieur à ceux que vous avez pu croiser auparavant !!!!  ლ(｀ー´ლ) ");
+				}
 				int i = 0;
 				boolean foundItem = false;
 				while(i < billy.getItems().getInventory().size() && foundItem != true) {
 					if(billy.getItems().getInventory().get(i).equals(Powerup.ARC)) {
 						System.out.println("Vous avez tué le monstre avec un arc, par manque de flèches vous lui avez lancé dessus.");
 						billy.getItems().removeItemsInInventory(Powerup.ARC);
+						monster.setAlive(false);
 						foundItem = true;
 					}
 					i ++;
 				}
 				if(!foundItem) {
-					if(billy.getLife() != 1) {
-						billy.looseOneLife();
-						System.out.println("Vous avez perdu une vie. Il vous reste "+billy.getLife()+" vie(s). Courage Billy!!");
+					if (billy.getLife() - monster.getStrength() < 0) {
+						billy.setLife(0);
+					} else if(billy.getLife() != 1) {
+						
+						billy.setLife(billy.getLife() - monster.getStrength());
+						System.out.println("Vous avez perdu " + monster.getStrength() + " vie(s). Il vous reste "+billy.getLife()+" vie(s). Courage Billy!!");
 					} else {
-						billy.looseOneLife();
+						billy.setLife(billy.getLife() - monster.getStrength());
 					}
 				}
 			} else {
+				if(monster.getStrength() > 1) {
+					System.out.println("Mein gott!!!! Vous avez trouvé un ennemi SUPERieur à ceux que vous avez pu croiser auparavant !!!!  ლ(｀ー´ლ) ");
+				}
 				if(billy.getLife() != 1) {
 					billy.looseOneLife();
 					System.out.println("Vous avez perdu une vie. Il vous reste "+billy.getLife()+" vie(s). Courage Billy!!");
 				} else {
-					billy.looseOneLife();
+					billy.setLife(billy.getLife() - monster.getStrength());
 				}
 			}
 			
