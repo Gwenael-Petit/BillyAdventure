@@ -17,25 +17,14 @@ public class Main {
 		
 		billy.getItems().addItemsInInventory(Powerup.ARC);
 		
-		Display d = new Display(map);
-		System.out.println(d);
-		
-		
-		
-		Move bouger = new Move () ;
-		for (int i = 0; i < 150; i++) {
-			bouger.moveRight(map);
-			bouger.moveMap(map);
-		}
-		clear();
-		
 		while (!billy.isDead() && !outgame) {
-			d = new Display(map);
+			Display d = new Display(map);
 			System.out.println(d);
 			
 			System.out.println("[i]: inventaire. \n[d] [Espace] [Entrée]: avancer.\n[z] [s]: monter / descendre (nécessite et utilise une pioche). \n[q]: quitter\n");
 			
 			String saisieUtilisateur = sc.nextLine();
+			Move bouger = new Move () ;
 			
 			if (saisieUtilisateur.equals("") ){
 				
