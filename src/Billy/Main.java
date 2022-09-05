@@ -13,13 +13,9 @@ public class Main {
 		
 		ecranTitre();
 		
-
-		
 		boolean outgame=false;
 		
 		billy.getItems().addItemsInInventory(Powerup.ARC);
-		
-		
 		
 		while (!billy.isDead() && !outgame) {
 			Display d = new Display(map);
