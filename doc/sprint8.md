@@ -3,6 +3,9 @@
 ## Démo + Planification du sprint suivant
 
 ### Ce que nous avons fait durant ce sprint
+Faire de l'héritage
+Finir les graphismes du shop 
+Creer un executable 
 
 
 ### Ce que nous allons faire durant le prochain sprint
