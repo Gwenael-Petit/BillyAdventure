@@ -178,7 +178,7 @@ public class Move {
 		}
 		map.map.get(1).set(1, " ");
 		map.map.get(1).set(2, " ");
-		map.map.get(1).set(3, "★");
+		map.map.get(1).set(3, " ");
 		map.map.get(1).set(4, " ");
 		map.map.get(1).set(5, " ");
 		 return map;
